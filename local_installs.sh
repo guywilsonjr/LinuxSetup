@@ -1,8 +1,4 @@
-#wget https://github.com/jakeday/linux-surface/releases/download/5.1.15-1/linux-headers-5.1.15-surface-linux-surface_5.1.15-surface-linux-surface-8_amd64.deb
-#wget https://github.com/jakeday/linux-surface/releases/download/5.1.15-1/linux-image-5.1.15-surface-linux-surface_5.1.15-surface-linux-surface-8_amd64.deb
-#wget https://github.com/jakeday/linux-surface/releases/download/5.1.15-1/linux-libc-dev_5.1.15-surface-linux-surface-8_amd64.deb
-#sudo dpkg -i linux*.deb
-sudo snap install node --channel=13 --classic
+fsudo snap install node --channel=13 --classic
 sudo snap install pycharm-professional --classic
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
