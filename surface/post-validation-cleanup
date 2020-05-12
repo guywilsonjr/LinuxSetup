@@ -1,0 +1,3 @@
+sudo mv /boot/vmlinuz-[KERNEL-VERSION]-surface-linux-surface{.signed,}
+sudo mv /boot/initrd.img-[KERNEL-VERSION]-surface-linux-surface{.signed,}
+sudo update-grub

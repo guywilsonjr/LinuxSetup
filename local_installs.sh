@@ -1,4 +1,4 @@
-fsudo snap install node --channel=13 --classic
+sudo snap install node --channel=13 --classic
 sudo snap install pycharm-professional --classic
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
