@@ -6,6 +6,9 @@ alias autoremove='apt autoremove'
 alias purge='apt purge'
 alias remove='apt remove'
 alias vi='vim'
+apt-get remove docker docker-engine docker.io containerd runc
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository ppa:jonathonf/gcc-9.0
 add-apt-repository -y ppa:deadsnakes/ppa
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -14,7 +17,7 @@ wget https://dev.mysql.com/get/mysql-apt-config_0.8.14-1_all.deb
 dpkg -i mysql-apt-config_0.8.14-1_all.deb
 apt update
 apt-get -y upgrade
-apt install -y build-essential mlocate curl file git libssl-dev binutils-dev libncurses5-dev bison flex libelf-dev python-pip python3-pip python3.8 python3.8 python3.8-venv ccache distcc docker docker.io snapd awscli google-chrome-stable vim
+apt install -y build-essential ca-certificates gnupg-agent apt-transport-https software-properties-common mlocate curl file git libssl-dev binutils-dev libncurses5-dev bison flex libelf-dev python-pip python3-pip python3.8 python3.8 python3.8-venv ccache distcc docker docker.io snapd awscli google-chrome-stable vim
 echo 'fs.inotify.max_user_watches = 524288' >> /etc/sysctl.d/idea.conf
 sysctl -p --system
 service docker start
