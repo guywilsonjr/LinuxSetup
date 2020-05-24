@@ -14,9 +14,8 @@ wget https://dev.mysql.com/get/mysql-apt-config_0.8.14-1_all.deb
 dpkg -i mysql-apt-config_0.8.14-1_all.deb
 apt update
 apt-get -y upgrade
-apt install -y build-essential mlocate curl file git libssl-dev binutils-dev libncurses5-dev bison flex libelf-dev python-pip python3-pip python3.8 python3.8 python3.8-venv ccache distcc docker docker.io snapd awscli npm google-chrome-stable vim
+apt install -y build-essential mlocate curl file git libssl-dev binutils-dev libncurses5-dev bison flex libelf-dev python-pip python3-pip python3.8 python3.8 python3.8-venv ccache distcc docker docker.io snapd awscli google-chrome-stable vim
 echo 'fs.inotify.max_user_watches = 524288' >> /etc/sysctl.d/idea.conf
 sysctl -p --system
 service docker start
-git clone git://github.com/jakeday/linux-surface --depth 1
 apt install mysql-server
