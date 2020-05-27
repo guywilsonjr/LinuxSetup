@@ -1,11 +1,4 @@
-alias update='apt update'
-alias install='apt -y install'
-alias upgrade='apt -y upgrade'
-alias upperdate='update && upgrade'
-alias autoremove='apt autoremove'
-alias purge='apt purge'
-alias remove='apt remove'
-alias vi='vim'
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 apt-get remove docker docker-engine docker.io containerd runc
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
@@ -17,8 +10,8 @@ wget https://dev.mysql.com/get/mysql-apt-config_0.8.14-1_all.deb
 dpkg -i mysql-apt-config_0.8.14-1_all.deb
 apt update
 apt-get -y upgrade
-apt install -y build-essential ca-certificates gnupg-agent apt-transport-https software-properties-common mlocate curl file git libssl-dev binutils-dev libncurses5-dev bison flex libelf-dev python-pip python3-pip python3.8 python3.8 python3.8-venv ccache distcc docker docker.io snapd awscli google-chrome-stable vim
+apt install -y build-essential ca-certificates nodejs gnupg-agent apt-transport-https software-properties-common mlocate curl file git libssl-dev docker-ce docker-ce-cli containerd.io binutils-dev libncurses5-dev bison flex libelf-dev python-pip python3-pip python3.8 python3.8 python3.8-venv ccache distcc install docker-ce docker-ce-cli containerd.io snapd awscli google-chrome-stable vim
 echo 'fs.inotify.max_user_watches = 524288' >> /etc/sysctl.d/idea.conf
 sysctl -p --system
 service docker start
-apt install mysql-server
+#apt install mysql-server
