@@ -8,3 +8,4 @@ sudo npm install -g aws-cdk
 pip install --upgrade pip
 pip3 install --upgrade pip
 python3.8 -m pip --upgrade pip
+echo 'source ~/LinuxSetup/aliases.sh' >> ~/.bashrc
