@@ -16,3 +16,4 @@ alias gcomm='git commit -a -m'
 alias gpm='git push origin master'
 alias gpush='git push origin $(git branch | sed -i -e "s/* //g")'
 alias gclone='git clone https://github.com/guywilsonjr/'
+alias deploy="cdk deploy '*' --require-approval never"
