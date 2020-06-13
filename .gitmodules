@@ -1,3 +1,6 @@
 [submodule "linux"]
-	path = linux
-	url = ./linux
+	path = Linux
+	url = https://github.com/guywilsonjr/Linux
+[submodule "nvidia-docker"]
+	path = Nvidia-docker
+	url =  https://github.com/nvidia-docker
