@@ -3,4 +3,4 @@
 	url = https://github.com/guywilsonjr/linux
 [submodule "nvidia-docker"]
 	path = nvidia-docker
-	url =  https://github.com/nvidia-docker
+	url =  https://github.com/NVIDIA/nvidia-docker

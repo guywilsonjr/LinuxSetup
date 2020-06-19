@@ -7,8 +7,11 @@ alias autoremove='apt autoremove'
 alias purge='apt purge'
 alias remove='apt remove'
 alias vi='vim'
+alias gsub = 'git submodule update --init'
 alias gfet='git fetch'
 alias gstat='git status'
+alias gstash='git stash'
+alias gpop='git stash pop'
 alias gstatus='gfet && gstat'
 alias gpull='git pull'
 alias greb='git rebase'
@@ -16,4 +19,5 @@ alias gcomm='git commit -a -m'
 alias gpm='git push origin master'
 alias gpush='git push origin $(git branch | sed -i -e "s/* //g")'
 alias gclone='git clone https://github.com/guywilsonjr/'
-alias deploy="cdk deploy '*' --require-approval never"
+
+
