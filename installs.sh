@@ -17,7 +17,7 @@ apt install -y build-essential ca-certificates nodejs gnupg-agent apt-transport-
 curl file git libssl-dev binutils-dev libncurses5-dev bison flex libelf-dev python-pip python3.8-dev python3-pip python3.8 python3.8\
    python3.8-venv ccache distcc docker-ce docker-ce-cli containerd.io snapd awscli google-chrome-stable vim\
    nvidia-settings libnvidia-decode-440 libnvidia-encode-440 libnvidia-ifr1-440 libnvidia-fbc1-440 libnvidia-gl-440 \
-   nvidia-prime libnvidia-compute-440 nvidia-driver-440 nvidia-container-toolkit xdotool openssh-server
+   nvidia-prime libnvidia-compute-440 nvidia-driver-440 nvidia-container-toolkit xdotool openssh-server sshfs
 echo 'fs.inotify.max_user_watches = 524288' >> /etc/sysctl.d/idea.conf
 sysctl -p --system
 service docker start
