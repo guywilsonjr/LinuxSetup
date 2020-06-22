@@ -18,6 +18,10 @@ curl file git libssl-dev binutils-dev libncurses5-dev bison flex libelf-dev pyth
    python3.8-venv ccache distcc docker-ce docker-ce-cli containerd.io snapd awscli google-chrome-stable vim\
    nvidia-settings libnvidia-decode-440 libnvidia-encode-440 libnvidia-ifr1-440 libnvidia-fbc1-440 libnvidia-gl-440 \
    nvidia-prime libnvidia-compute-440 nvidia-driver-440 nvidia-container-toolkit xdotool openssh-server sshfs
+
+curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
 echo 'fs.inotify.max_user_watches = 524288' >> /etc/sysctl.d/idea.conf
 sysctl -p --system
 service docker start
