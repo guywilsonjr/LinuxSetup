@@ -16,9 +16,15 @@ apt install -y build-essential ca-certificates nodejs gnupg-agent apt-transport-
 
 curl file git libssl-dev binutils-dev libncurses5-dev bison flex libelf-dev python-pip python3.8-dev python3-pip python3.8 python3.8\
    python3.8-venv ccache distcc docker-ce docker-ce-cli containerd.io snapd awscli google-chrome-stable vim\
-   nvidia-settings libnvidia-decode-440 libnvidia-encode-440 libnvidia-ifr1-440 libnvidia-fbc1-440 libnvidia-gl-440 \
-   nvidia-prime libnvidia-compute-440 nvidia-driver-440 nvidia-container-toolkit xdotool openssh-server sshfs
+   nvidia-settings libnvidia-decode-450 libnvidia-encode-450 libnvidia-ifr1-450 libnvidia-fbc1-450 libnvidia-gl-450 \
+   nvidia-prime libnvidia-compute-450 nvidia-driver-450 nvidia-container-toolkit xdotool openssh-server sshfs
 
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
+apt update
+apt -y install cuda
 curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
