@@ -1,8 +1,9 @@
 alias bashrc='vim ~/.bashrc && source ~/.bashrc'
-alias update='apt update'
+alias update='apt update && apt list --upgradable'
 alias install='apt install -y'
 alias upgrade='apt upgrade -y'
 alias upperdate='update && upgrade'
+alias list='apt list --upgradable'
 alias autoremove='apt autoremove'
 alias purge='apt purge'
 alias remove='apt remove'
@@ -20,5 +21,6 @@ alias gcomm='git commit -a -m'
 alias gpm='git push origin master || git push origin main'
 alias gpush='git push origin $(git branch | sed -i -e "s/* //g")'
 alias gclone='git clone --recurse-submodules https://github.com/guywilsonjr/'
+alias gbranch='git branch'
 
 
