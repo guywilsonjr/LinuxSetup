@@ -10,6 +10,8 @@ function gcom () {
   for word in "$@"; do
     msgs="$msgs $word"
   done
-  echo "commiting with With Message:\n $msgs"
+  echo "commiting with With Message:\
+  \"$msgs\"\
+  "
   git commit -a -m "${msgs%?}"
 }
