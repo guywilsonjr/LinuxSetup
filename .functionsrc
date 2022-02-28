@@ -1,9 +1,15 @@
 function gcom () {
-  msg = ''
+  echo 'premes'
+  msgs=''
+  echo 'postemes'
+  if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    return
+  fi
   for word in "$@"; do
-    msg += word
-    msg += " "
+    msgs="$msgs $word"
   done
-  echo "With Message" $msg
-  git commit -a -m "${msg::-1}"
+  echo "commiting with With Message:\n $msgs"
+  git commit -a -m "${msgs%?}"
 }
