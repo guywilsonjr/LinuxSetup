@@ -1,0 +1,9 @@
+function gcom () {
+  msg = ''
+  for word in "$@"; do
+    msg += word
+    msg += " "
+  done
+  echo "With Message" $msg
+  git commit -a -m "${msg::-1}"
+}
