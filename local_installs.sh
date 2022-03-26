@@ -1,4 +1,4 @@
-sudo snap install pycharm-professional --classic
+
 # aws configure
 git config --global user.name "Guy Wilson"
 git config --global user.email "Guywilsonjr@gmail.com"
