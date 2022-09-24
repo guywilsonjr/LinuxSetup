@@ -6,7 +6,7 @@ function gcom () {
   fi
   msgs="$@"
   for word in "$@"; do
-    msgs="$msgs $word"
+    msgs+="$msgs"
   done
   echo "commiting with With Message:"
   echo $msgs
