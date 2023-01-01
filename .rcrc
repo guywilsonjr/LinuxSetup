@@ -1,0 +1,8 @@
+. $LINUX_SETUP_DIR/.custombashrc
+. $LINUX_SETUP_DIR/.functionsrc
+. $LINUX_SETUP_DIR/.aliasrc
+
+if test -f .aliasrc; then
+    echo "Sourcing local .aliasrc file"
+    . ./.aliasrc
+fi
