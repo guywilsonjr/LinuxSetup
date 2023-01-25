@@ -1,6 +1,7 @@
 alias py10='python3.10'
 alias py10m='py10 -m'
 alias pipinstall='pip install -U'
+alias pupile='pip-compile --upgrade'
 alias svenv='source .venv/bin/activate 2>/dev/null || source venv/bin/activate'
 alias venvcrup='py10m venv --upgrade-deps --symlinks .venv'
 alias venvupsert='venvcrup --clear'
