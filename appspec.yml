@@ -1,0 +1,20 @@
+
+version: 0.0
+os: linux
+hooks:
+  BeforeInstall:
+    - location: scripts/appspecsetup.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/appspecsetup.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/appspecsetup.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/appspecsetup.sh
+      timeout: 300
+      runas: root
