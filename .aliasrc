@@ -62,4 +62,5 @@ alias dstps='docker stack ps'
 alias dsu='docker service update'
 alias dsuf='dsu --force'
 alias upgrade_deps='pip install -U pip setuptools'
-
+alias pipdate='pip install -U pip setuptools wheel packaging'
+alias pip-compile-update='rm requirements.txt && pip-compile -U'
