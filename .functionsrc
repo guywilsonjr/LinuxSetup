@@ -4,12 +4,12 @@ function gcom () {
     echo "No arguments supplied"
     return
   fi
-  msgs="$@"
+  commit_msg=$1
+  shift
   for word in "$@"; do
-    msgs+="$msgs"
+    commit_msg+=" $word"
   done
-  echo "commiting with With Message:"
-  echo $msgs
+  #echo "commiting with With Message: $commit_msg"
 
-  git commit -a -m "${msgs%?}"
+  git commit -a -m "$commit_msg"
 }
