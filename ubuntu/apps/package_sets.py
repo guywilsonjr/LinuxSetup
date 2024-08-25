@@ -1,1 +1,0 @@
-gitset = ['git', 'git-doc', ]

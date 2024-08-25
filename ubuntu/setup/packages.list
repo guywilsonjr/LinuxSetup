@@ -1,1 +1,0 @@
-build-essential ca-certificates nodejs gnupg-agent apt-transport-https software-properties-common

@@ -9,7 +9,6 @@ function gcom () {
   for word in "$@"; do
     commit_msg+=" $word"
   done
-  #echo "commiting with With Message: $commit_msg"
 
   git commit -a -m "$commit_msg"
 }
