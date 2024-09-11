@@ -1,43 +1,11 @@
+
+
 function gcom () {
-  if [ $# -eq 0 ]
-  then
-    echo "No arguments supplied"
-    return
-  fi
   commit_msg=$1
-  shift
-  for word in "$@"; do
-    commit_msg+=" $word"
-  done
-
-  git commit -a -m "$commit_msg"
+    shift
+    for word in "$@"; do
+      commit_msg+=" $word"
+    done
+    git commit -a -m "$commit_msg"
 }
 
-function deltaglobal () {
-  if [ $# -eq 0 ]
-  then
-    echo "No arguments supplied"
-    return
-  fi
-  tag_name=$1
-
-  if [[ $tag_name -ne v* ]]
-  then
-    echo "Tag name must start with v"
-    return
-  else
-    echo "Deleting tag $tag_name"
-  fi
-  gtagd $tag_name || gptagd $tag_name
-}
-
-function recreate_tag() {
-  if [ $# -eq 0 ]
-  then
-    echo "No arguments supplied"
-    return
-  fi
-  tag_name=$1
-  deltaglobal $tag_name
-  gtag $tag_name -m "$tag_name"
-}
