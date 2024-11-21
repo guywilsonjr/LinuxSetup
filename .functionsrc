@@ -9,3 +9,7 @@ function gcom () {
     git commit -a -m "$commit_msg"
 }
 
+function compressdir () {
+  dir=$1
+  XZ_OPT=-9e tar cJf tarfile$(epoch).tar.xz $dir
+}

@@ -1,6 +1,7 @@
-. $LINUX_SETUP_DIR/.custombashrc
-. $LINUX_SETUP_DIR/.functionsrc
-. $LINUX_SETUP_DIR/.aliasrc
+SCRIPT_DIR="$( dirname -- "${BASH_SOURCE[0]}" )"
+. $SCRIPT_DIR/.custombashrc
+. $SCRIPT_DIR/.functionsrc
+. $SCRIPT_DIR/.aliasrc
 
 if test -f .aliasrc; then
     echo "Sourcing local .aliasrc file"
